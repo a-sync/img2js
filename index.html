@@ -17,10 +17,11 @@
             return;
         }
 
-        output.innerHTML = img2js(pngB64, shiftVal);
+        output.innerText = img2js(pngB64, shiftVal);
     }
 
     function img2js(pngB64, shiftVal) {
+        console.log(pngB64.length, shiftVal);
         if(!pngB64 || isNaN(shiftVal)) {
             alert('Invalid input!');
             return '';
@@ -47,7 +48,7 @@
         }
         resultStr=resultStr.trim();
 
-        //console.log(unescape(decodeURIComponent(window.atob(resultStr))));
+        console.log(window.atob(resultStr));
         return unescape(decodeURIComponent(window.atob(resultStr)));
     }
     </script>
