@@ -14,7 +14,7 @@
             var shiftVal = inputVal.split('=[0,255,')[1].split('];')[0];
         } catch(e) {
             alert('Invalid input!');
-            return;
+            return '';
         }
 
         output.innerText = img2js(pngB64, shiftVal);
